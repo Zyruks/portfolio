@@ -3,12 +3,39 @@ import { cn } from '@common';
 import Tag from './Tag/Tag.astro';
 
 interface Props {
+  /**
+   * The title of the item.
+   */
   title: string;
+
+  /**
+   * The main content or body text.
+   */
   body: string;
+
+  /**
+   * The URL for a hyperlink.
+   */
   href: string;
+
+  /**
+   * Additional CSS class to be applied, optional.
+   */
   class?: string;
+
+  /**
+   * An array of tags associated with the item.
+   */
   tags: string[];
+
+  /**
+   * The date associated with the item.
+   */
   date: string;
+
+  /**
+   * An optional subtitle.
+   */
   subTitle?: string;
 }
 
@@ -36,7 +63,7 @@ const classes = {
 <article class={classes.container}>
   {
     href === '' ? (
-      <div class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10">
+      <div class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10 xl:grid-cols-[15%,1fr]">
         <span class={classes.date}>{date}</span>
         <div>
           <h2 class={classes.title}>{title}</h2>
@@ -50,7 +77,10 @@ const classes = {
         </div>
       </div>
     ) : (
-      <a href={href} class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10">
+      <a
+        href={href}
+        class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10 xl:grid-cols-[15%,1fr]"
+      >
         <span class={classes.date}>{date}</span>
         <div>
           <h2 class={classes.title}>{title}</h2>
