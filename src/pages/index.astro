@@ -1,7 +1,135 @@
 ---
+import Card from '@components/Card.astro';
+import { IconCatalog, IconStyle } from '@components/Icon/Icon';
+import Icon from '@components/Icon/Icon.astro';
 import BasicLayout from '@layouts/BasicLayout.astro';
+import Navigation from '@layouts/Navigation.astro';
+import experienceData from '@data/experience.json';
+import projectsData from '@data/projects.json';
+
+type ProjectDetails = {
+  href: string;
+  title: string;
+  body: string;
+  subTitle?: string;
+  tags: string[];
+  date: string;
+};
+
+type ProjectArray = ProjectDetails[];
+
+const experience: ProjectArray = experienceData;
+const projects: ProjectArray = projectsData;
 ---
 
-<BasicLayout metaTitle="THE Portfolio">
-  <h2>hey</h2>
+<BasicLayout metaTitle="Sam Portfolio">
+  <main class="container mx-auto flex flex-col justify-between gap-20 px-8 lg:flex-row">
+    <aside
+      class="top-0 mx-auto flex h-[40svh] max-w-md flex-col justify-between lg:sticky lg:h-[85svh]"
+    >
+      <div class="mt-14 text-center lg:text-left">
+        <h1 class="animate-fade-up text-fluid-xl font-bold">Samuel Llibre</h1>
+        <span class="block animate-fade-up text-xl font-semibold text-gray-300 animate-delay-200"
+          >Front-end Developer</span
+        >
+        <p class="mt-2 animate-fade-up text-gray-400 animate-delay-300">
+          I thrive on crafting exceptional and accessible digital experiences, with a passion for
+          pushing the boundaries of creativity through innovative CSS and JavaScript
+          experimentation.
+        </p>
+      </div>
+      <Navigation class="max-lg:hidden" />
+      <footer class="flex animate-fade justify-center gap-6 lg:items-start">
+        <a href="https://github.com/zyruks" target="_blank">
+          <Icon
+            class="w-6 hover:text-blue-500"
+            iconStyle={IconStyle.solid}
+            icon={IconCatalog.gitHub}
+          />
+        </a>
+        <a href="https://x.com/zyruks" target="_blank">
+          <Icon
+            class="w-6 hover:text-blue-500"
+            iconStyle={IconStyle.solid}
+            icon={IconCatalog.twitter}
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/zyruks/" target="_blank">
+          <Icon
+            class="w-6 hover:text-blue-500"
+            iconStyle={IconStyle.solid}
+            icon={IconCatalog.linkedin}
+          />
+        </a>
+      </footer>
+    </aside>
+    <section class="grid w-full gap-10">
+      <div id="top" class="section-area | my-20 flex animate-fade-up flex-col gap-4 text-lg">
+        <p>
+          Back in 2013, a spark of curiosity led me to explore the intricacies of graphic design,
+          igniting a passion for the digital arts that seamlessly evolved into web development💻.
+          Over the years, I've woven my path through the dynamic landscape of coding, from piecing
+          together engaging interfaces as a freelancer to enhancing user experiences with
+          <b class="text-blue-500">mobile-first designs</b> that thrive on responsiveness.
+        </p>
+        <p>
+          Fast-forward to today, and my professional tapestry includes a spectrum of experiences,
+          from empowering startups with robust digital identities to elevating businesses with
+          innovative web solutions. My current focus lies in leading and nurturing projects that
+          resonate with users, evident in my creation of UI Guideline, a resource that attracts over
+
+
+          <b class="text-blue-500">13,000 unique visitors</b> a month, providing developers and
+          designers with insights into effective UI components.
+        </p>
+        <p>
+          My journey is also marked by a commitment to sharing knowledge, as seen in my
+          collaborative efforts on side projects like Twon, which enhances Twitter engagement
+          through novel features. Away from the keyboard, my world expands into climbing challenging
+          routes, cherishing moments with my loved ones, or exploring the vast terrains of gaming
+          worlds, each an adventure in its own right 🌍.
+        </p>
+      </div>
+
+      <div id="projects" class="section-area | grid animate-fade gap-8 animate-delay-300">
+        <h2 class="flex items-center gap-8 text-2xl font-bold uppercase">Projects</h2>
+        {
+          projects.map((item) => (
+            <Card
+              href={item.href}
+              title={item.title}
+              subTitle={item.subTitle}
+              body={item.body}
+              tags={item.tags}
+              date={item.date}
+            />
+          ))
+        }
+      </div>
+
+      <div id="experience" class="section-area | mt-20 grid animate-fade gap-8 animate-delay-300">
+        <h2 class="flex items-center gap-8 text-2xl font-bold uppercase">Experience</h2>
+        {
+          experience.map((item) => (
+            <Card
+              href={item.href}
+              title={item.title}
+              body={item.body}
+              tags={item.tags}
+              date={item.date}
+            />
+          ))
+        }
+      </div>
+    </section>
+  </main>
 </BasicLayout>
+
+<style>
+  h2:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: rgb(59 130 246);
+  }
+</style>
