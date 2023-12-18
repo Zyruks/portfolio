@@ -1,3 +1,79 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/************************************************/
+/*                 CSS RESETS                   */
+/************************************************/
+
+/* Resets */
+html,
+body,
+:root {
+  @apply font-sans;
+  height: 100%;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
+}
+
+button {
+  outline: none !important;
+}
+
+/*
+ * Inputs
+ */
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Accesibility options */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+
+/************************************************/
+/*                 UTILITY CLASSES              */
+/************************************************/
+
+@layer utilities {
+  /**
+   * NOTE: This utility class is necessary to make
+   * the scrollbar invisible in Firefox browser.
+   */
+  .transparent-scrollbar-color {
+    scrollbar-color: transparent transparent;
+  }
+
+  /* Horizontal Scroll (Toolbar & SubMenu) */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
