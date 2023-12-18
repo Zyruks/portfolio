@@ -7,14 +7,37 @@ import Navigation from '@layouts/Navigation.astro';
 import experienceData from '@data/experience.json';
 import projectsData from '@data/projects.json';
 
-type ProjectDetails = {
-  href: string;
+interface ProjectDetails {
+  /**
+   * The title of the item.
+   */
   title: string;
+
+  /**
+   * The main content or body text.
+   */
   body: string;
-  subTitle?: string;
+
+  /**
+   * The URL for a hyperlink.
+   */
+  href: string;
+
+  /**
+   * An array of tags associated with the item.
+   */
   tags: string[];
+
+  /**
+   * The date associated with the item.
+   */
   date: string;
-};
+
+  /**
+   * An optional subtitle.
+   */
+  subTitle?: string;
+}
 
 type ProjectArray = ProjectDetails[];
 
@@ -23,7 +46,7 @@ const projects: ProjectArray = projectsData;
 ---
 
 <BasicLayout metaTitle="Sam Portfolio">
-  <main class="container mx-auto flex flex-col justify-between gap-20 px-8 lg:flex-row">
+  <main class="container mx-auto flex flex-col justify-between px-8 lg:flex-row lg:gap-20">
     <aside
       class="top-0 mx-auto flex h-[40svh] max-w-md flex-col justify-between lg:sticky lg:h-[85svh]"
     >
@@ -39,7 +62,9 @@ const projects: ProjectArray = projectsData;
         </p>
       </div>
       <Navigation class="max-lg:hidden" />
-      <footer class="flex animate-fade justify-center gap-6 lg:items-start">
+      <footer
+        class="flex animate-fade justify-center gap-6 lg:ml-4 lg:items-start lg:justify-start"
+      >
         <a href="https://github.com/zyruks" target="_blank">
           <Icon
             class="w-6 hover:text-blue-500"

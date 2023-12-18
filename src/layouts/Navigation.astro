@@ -28,7 +28,7 @@ const classes = {
 
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      navLinks.forEach((lnk) => lnk.removeAttribute('data-status'));
+      navLinks.forEach((lnk) => lnk.setAttribute('data-status', 'inactive'));
       link.setAttribute('data-status', 'active');
     });
   });
