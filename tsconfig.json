@@ -7,6 +7,7 @@
       "@assets/*": ["assets/*"],
       "@config": ["config.ts"],
       "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
       "@content/*": ["content/*"],
       "@common": ["common/index"],
       "@layouts/*": ["layouts/*"],
