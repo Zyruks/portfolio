@@ -34,7 +34,7 @@
   {
     "href": "https://www.ontimesolutioncorp.com",
     "title": "On Time Solution Corp",
-    "body": "Crafted a responsive company website with Astro and Tailwind CSS that improved customer engagement, leading to an increase in weekly calls.",
+    "body": "Crafted a responsive and engaging company website using Astro and Sass, dramatically boosting customer interaction. This strategic update propelled weekly customer calls from a mere 2-5 to an impressive 15-25, marking a significant leap in business engagement and overall market visibility.",
     "tags": ["Astro 3", "Sass 1.62.0", "TypeScript 5.0.4", "Stylelint 14.16.1", "CUBECSS"],
     "date": "2023"
   },
