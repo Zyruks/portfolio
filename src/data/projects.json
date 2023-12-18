@@ -1,0 +1,40 @@
+[
+  {
+    "href": "https://www.ui-guideline.com",
+    "title": "UI Guideline",
+    "body": "Developed using Next.js, Tailwind CSS, and TypeScript, UI-Guideline.com serves as an essential resource, drawing over 13,000 monthly visitors seeking UI component guidance.",
+    "subTitle": "Collaboration with Sergio Ruiz",
+    "tags": [
+      "Next.js 13",
+      "Tailwind 3.3.0",
+      "TypeScript 5.0.4",
+      "React",
+      "Prisma",
+      "tRPC",
+      "NextAuth"
+    ],
+    "date": "2023 - Present"
+  },
+  {
+    "href": "https://www.twon.app",
+    "title": "Twon",
+    "body": "A Next.js application that boosts Twitter engagement through innovative features, offering a unique node-based interface for user interaction.",
+    "subTitle": "Collaboration with Sergio Ruiz",
+    "tags": ["Next.js 13", "Tailwind 3.3.0", "TypeScript 5.0.4"],
+    "date": "2023 - Present"
+  },
+  {
+    "href": "https://www.ontimesolutioncorp.com",
+    "title": "On Time Solution Corp",
+    "body": "Crafted a responsive company website with Astro and Tailwind CSS that improved customer engagement, leading to an increase in weekly calls.",
+    "tags": ["Astro 3", "Tailwind 3.3.0", "TypeScript 5.0.4"],
+    "date": "2023"
+  },
+  {
+    "href": "/master-appliance",
+    "title": "Master Appliance Tampa",
+    "body": "Revitalized an online presence with a bespoke website, enhancing customer acquisition by 80% through strategic design and development.",
+    "tags": ["HTML 5", "CSS 3", "JavaScript ES6"],
+    "date": "2022 - 2023"
+  }
+]
