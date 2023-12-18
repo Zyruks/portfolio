@@ -18,6 +18,7 @@ export enum IconCatalog {
   arrowTopRightOnSquare = 'arrowTopRightOnSquare',
   arrowSquareOut = 'arrowSquareOut',
   arrowsOutSimple = 'arrowsOutSimple',
+  atSymbol = 'atSymbol',
   barsArrowDown = 'barsArrowDown',
   bars3 = 'bars3',
   beaker = 'beaker',
@@ -139,6 +140,10 @@ export const Icons: Record<IconCatalog, IconType> = {
   [IconCatalog.arrowsOutSimple]: {
     outline:
       'M19.563 4.75V8.5a.312.312 0 1 1-.625 0V5.505L14.47 9.97a.313.313 0 0 1-.442-.442l4.466-4.466H15.5a.313.313 0 1 1 0-.625h3.75a.313.313 0 0 1 .313.312ZM9.528 14.029l-4.466 4.466V15.5a.313.313 0 1 0-.625 0v3.75a.313.313 0 0 0 .312.313H8.5a.312.312 0 1 0 0-.625H5.505L9.97 14.47a.313.313 0 0 0-.442-.442Z',
+  },
+  [IconCatalog.atSymbol]: {
+    outline:
+      'M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25',
   },
 
   [IconCatalog.barsArrowDown]: {

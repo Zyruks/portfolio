@@ -45,13 +45,13 @@ const experience: ProjectArray = experienceData;
 const projects: ProjectArray = projectsData;
 ---
 
-<BasicLayout metaTitle="Sam Portfolio">
+<BasicLayout>
   <main class="container mx-auto flex flex-col justify-between px-8 lg:flex-row lg:gap-20">
     <aside
-      class="top-0 mx-auto flex h-[40svh] max-w-md flex-col justify-between lg:sticky lg:h-[85svh]"
+      class="top-0 mx-auto flex h-[40svh] max-w-xs flex-col justify-between lg:sticky lg:h-[100svh] xl:max-w-md"
     >
       <div class="mt-14 text-center lg:text-left">
-        <h1 class="animate-fade-up text-fluid-xl font-bold">Samuel Llibre</h1>
+        <h1 class="animate-fade-up text-fluid-lg font-bold xl:text-fluid-xl">Samuel Llibre</h1>
         <span class="block animate-fade-up text-xl font-semibold text-gray-300 animate-delay-200"
           >Front-end Developer</span
         >
@@ -63,14 +63,15 @@ const projects: ProjectArray = projectsData;
       </div>
       <Navigation class="max-lg:hidden" />
       <footer
-        class="flex animate-fade justify-center gap-6 lg:ml-4 lg:items-start lg:justify-start"
+        class="flex animate-fade-up justify-center gap-6 py-10 lg:ml-4 lg:items-start lg:justify-start lg:pb-10"
       >
-        <a href="https://github.com/zyruks" target="_blank">
+        <a href="https://github.com/zyruks" target="_blank" tabindex="0">
           <Icon
             class="w-6 hover:text-blue-500"
             iconStyle={IconStyle.solid}
             icon={IconCatalog.gitHub}
           />
+          <span class="visually-hidden">github</span>
         </a>
         <a href="https://x.com/zyruks" target="_blank">
           <Icon
@@ -78,13 +79,19 @@ const projects: ProjectArray = projectsData;
             iconStyle={IconStyle.solid}
             icon={IconCatalog.twitter}
           />
+          <span class="visually-hidden">X</span>
         </a>
         <a href="https://www.linkedin.com/in/zyruks/" target="_blank">
           <Icon
-            class="w-6 hover:text-blue-500"
+            class="w-6 -translate-y-1 hover:text-blue-500"
             iconStyle={IconStyle.solid}
             icon={IconCatalog.linkedin}
           />
+          <span class="visually-hidden">LinkedIn</span>
+        </a>
+        <a href="mailto:dev@zyruks.com" target="_blank">
+          <Icon class="w-6 hover:text-blue-500" icon={IconCatalog.atSymbol} />
+          <span class="visually-hidden">Email</span>
         </a>
       </footer>
     </aside>
@@ -108,11 +115,9 @@ const projects: ProjectArray = projectsData;
           designers with insights into effective UI components.
         </p>
         <p>
-          My journey is also marked by a commitment to sharing knowledge, as seen in my
-          collaborative efforts on side projects like Twon, which enhances Twitter engagement
-          through novel features. Away from the keyboard, my world expands into climbing challenging
-          routes, cherishing moments with my loved ones, or exploring the vast terrains of gaming
-          worlds, each an adventure in its own right 🌍.
+          Away from the keyboard, my world expands into climbing challenging routes, cherishing
+          moments with my loved ones, or exploring the vast terrains of gaming worlds, each an
+          adventure in its own right 🌍.
         </p>
       </div>
 

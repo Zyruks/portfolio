@@ -8,10 +8,10 @@
       "Next.js 13",
       "Tailwind 3.3.0",
       "TypeScript 5.0.4",
-      "React",
-      "Prisma",
-      "tRPC",
-      "NextAuth"
+      "Prisma 4.13.0",
+      "tRPC 10.20.0",
+      "React 18.2.0",
+      "Clerk 4.27.1"
     ],
     "date": "2023 - Present"
   },
@@ -20,21 +20,29 @@
     "title": "Twon",
     "body": "A Next.js application that boosts Twitter engagement through innovative features, offering a unique node-based interface for user interaction.",
     "subTitle": "Collaboration with Sergio Ruiz",
-    "tags": ["Next.js 13", "Tailwind 3.3.0", "TypeScript 5.0.4"],
+    "tags": [
+      "Next.js 13",
+      "Tailwind 3.3.0",
+      "TypeScript 5.0.4",
+      "Prisma 4.13.0",
+      "tRPC 10.20.0",
+      "React 18.2.0",
+      "NextAuth"
+    ],
     "date": "2023 - Present"
   },
   {
     "href": "https://www.ontimesolutioncorp.com",
     "title": "On Time Solution Corp",
     "body": "Crafted a responsive company website with Astro and Tailwind CSS that improved customer engagement, leading to an increase in weekly calls.",
-    "tags": ["Astro 3", "Tailwind 3.3.0", "TypeScript 5.0.4"],
+    "tags": ["Astro 3", "Sass 1.62.0", "TypeScript 5.0.4", "Stylelint 14.16.1", "CUBECSS"],
     "date": "2023"
   },
   {
     "href": "",
     "title": "Master Appliance Tampa",
     "body": "Revitalized an online presence with a bespoke website, enhancing customer acquisition by 80% through strategic design and development.",
-    "tags": ["HTML 5", "CSS 3", "JavaScript ES6"],
+    "tags": ["HTML 5", "Sass 1.62.0", "CSS 3", "JavaScript ES6"],
     "date": "2022 - 2023"
   }
 ]
