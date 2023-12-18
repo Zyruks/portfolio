@@ -1,0 +1,24 @@
+---
+import { SITE_TITLE } from '../../consts';
+import HeaderLink from './HeaderLink/HeaderLink.astro';
+---
+
+<header class="content-grid">
+  <nav class="primary-nav flex">
+    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <div class="flex-group">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+    </div>
+  </nav>
+</header>
+
+<style lang="scss">
+  .primary-nav {
+    block-size: var(--size-8);
+  }
+
+  div {
+    gap: var(--size-4);
+  }
+</style>

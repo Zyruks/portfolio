@@ -1,0 +1,11 @@
+.even-columns {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+  justify-items: center;
+
+
+  @media (width >=768px) {
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+  }
+}

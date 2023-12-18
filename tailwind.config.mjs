@@ -1,0 +1,38 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      animationDelay: {
+        400: '400ms',
+        600: '600ms',
+        800: '800ms',
+        '3s': '3s',
+        '5s': '5s',
+        '10s': '10s',
+        '15s': '15s',
+        '20s': '20s',
+      },
+      animationDuration: {
+        400: '400ms',
+        600: '600ms',
+        800: '800ms',
+        '3s': '3s',
+        '5s': '5s',
+        '10s': '10s',
+        '15s': '15s',
+        '20s': '20s',
+      },
+      fontSize: {
+        'fontSize-xs': 'var(--fluid-xs)',
+        'fontSize-sm': 'var(--fluid-sm)',
+        'fontSize-base': 'var(--fluid-base)',
+        'fontSize-md': 'var(--fluid-md)',
+        'fontSize-lg': 'var(--fluid-lg)',
+        'fontSize-xl': 'var(--fluid-xl)',
+        'fontSize-2xl': 'var(--fluid-2xl)',
+      },
+    },
+  },
+  plugins: [require('tailwindcss-scrollbar'), require('tailwindcss-animated')],
+};

@@ -1,0 +1,9 @@
+.husky
+.vscode
+node_modules
+public
+dist
+.vercel
+.astro
+.pnpm
+.astro.config.mjs

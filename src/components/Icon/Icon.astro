@@ -1,0 +1,65 @@
+---
+import { cn } from '@common';
+import type { HTMLAttributes } from 'astro/types';
+import { IconCatalog, Icons, IconStyle } from './Icons';
+
+const IconStyles: Record<IconStyle, number> = {
+  [IconStyle.thin]: 1,
+  [IconStyle.light]: 1.2,
+  [IconStyle.regular]: 1.5,
+  [IconStyle.bold]: 1.8,
+  [IconStyle.solid]: 0,
+};
+
+interface Props extends HTMLAttributes<'svg'> {
+  /**
+   * Additional CSS classes to be applied to the SVG element.
+   */
+  classes?: string;
+
+  /**
+   * The icon to display.
+   */
+  icon?: IconCatalog;
+
+  /**
+   * The style of the icon.
+   */
+  iconStyle?: IconStyle;
+}
+
+const {
+  classes: className,
+  icon = IconCatalog.adjustmentsHorizontal,
+  iconStyle = IconStyle.thin,
+} = Astro.props;
+
+const classes = cn(
+  {
+    'fill-current stroke-none': iconStyle === IconStyle.solid,
+    'stroke-current fill-none': iconStyle !== IconStyle.solid,
+  },
+  className
+);
+
+const strokeWidth = IconStyles[iconStyle];
+const iconPaths = Icons[icon];
+const iconPath = iconStyle === IconStyle.solid ? iconPaths.solid : iconPaths.outline;
+---
+
+<svg
+  class={classes}
+  data-testid="Icon"
+  viewBox="0 0 24 24"
+  xmlns="http://www.w3.org/2000/svg"
+  stroke-width={strokeWidth}
+  focusable="false"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d={iconPath}></path>
+</svg>

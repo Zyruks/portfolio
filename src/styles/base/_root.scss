@@ -1,0 +1,9 @@
+:root {
+  --fluid-xs: clamp(0.75rem, 0.7rem + 0.05vw, 0.875rem);
+  --fluid-sm: clamp(0.8rem, 0.7731rem + 0.0347vw, 0.9rem);
+  --fluid-base: clamp(1.875rem, calc(1.15rem + 1.50vw), 2.50rem);
+  --fluid-md: clamp(1.5rem, 1.2rem + 1.0vw, 2rem);
+  --fluid-lg: clamp(2rem, 1.8rem + 2.0vw, 2.5rem);
+  --fluid-xl: clamp(1.875rem, 8vw, 4rem);
+  --fluid-2xl: clamp(1.875rem, 8vw, 5rem);
+}

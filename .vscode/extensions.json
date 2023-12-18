@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx",
+    "phoenisx.cssvar",
+    "zignd.html-css-class-completion",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "mrmlnc.vscode-scss",
+    "stylelint.vscode-stylelint"
+  ]
+}

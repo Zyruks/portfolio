@@ -1,0 +1,18 @@
+export enum BlogCategory {
+  webBasics = 'web basics',
+  frontEnd = 'front-end',
+  backEnd = 'back-end',
+  fullStack = 'full-stack',
+  uiux = 'ui/ux',
+  javaScript = 'javascript',
+  performance = 'performance',
+  versionControl = 'version control',
+  devOps = 'devops',
+  cloud = 'cloud',
+  selfHelp = 'self help',
+  timeManagement = 'time management',
+  productivity = 'productivity',
+  career = 'career',
+  mentalHealth = 'mental health',
+  workLife = 'work-life',
+}
