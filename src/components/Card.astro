@@ -1,61 +1,68 @@
 ---
+import { cn } from '@common';
+import Tag from './Tag/Tag.astro';
+
 interface Props {
   title: string;
   body: string;
   href: string;
+  class?: string;
+  tags: string[];
+  date: string;
+  subTitle?: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, class: className, tags, date, subTitle } = Astro.props;
+
+const classes = {
+  container: cn(
+    'w-full rounded-2xl border-2 border-gray-900 hover:border-gray-700',
+    'bg-gray-900 hover:bg-gray-800',
+    'transition-all duration-300',
+    'shadow-sm shadow-transparent hover:shadow-md hover:shadow-slate-950',
+    'group',
+    className
+  ),
+  date: cn(
+    'whitespace-nowrap text-gray-400 group-hover:text-gray-200 transition-colors duration-500'
+  ),
+  title: cn('text-lg font-bold text-gray-100 flex gap-4 items-center'),
+  subtitle: cn('mt-2 block text-gray-400 group-hover:text-gray-300 transition-colors duration-500'),
+  body: cn('mt-2 text-gray-400'),
+  tagContainer: cn('col-start-2 col-end-4 flex flex-wrap gap-4'),
+};
 ---
 
-<li class="bg-slate-200">
-  <a href={href}>
-    <h2>
-      {title}
-      <span>&rarr;</span>
-    </h2>
-    <p>
-      {body}
-    </p>
-  </a>
-</li>
-<style>
-  .link-card {
-    list-style: none;
-    display: flex;
-    padding: 1px;
-    background-color: #23262d;
-    background-image: none;
-    background-size: 400%;
-    border-radius: 7px;
-    background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+<article class={classes.container}>
+  {
+    href === '' ? (
+      <div class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10">
+        <span class={classes.date}>{date}</span>
+        <div>
+          <h2 class={classes.title}>{title}</h2>
+          <span class={classes.subtitle}>{subTitle}</span>
+          <p class={classes.body}>{body}</p>
+        </div>
+        <div class={classes.tagContainer}>
+          {tags.map((tag) => (
+            <Tag>{tag}</Tag>
+          ))}
+        </div>
+      </div>
+    ) : (
+      <a href={href} class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10">
+        <span class={classes.date}>{date}</span>
+        <div>
+          <h2 class={classes.title}>{title}</h2>
+          <span class={classes.subtitle}>{subTitle}</span>
+          <p class={classes.body}>{body}</p>
+        </div>
+        <div class={classes.tagContainer}>
+          {tags.map((tag) => (
+            <Tag>{tag}</Tag>
+          ))}
+        </div>
+      </a>
+    )
   }
-  .link-card > a {
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: calc(1.5rem - 1px);
-    border-radius: 8px;
-    color: white;
-    background-color: #23262d;
-    opacity: 0.8;
-  }
-  h2 {
-    margin: 0;
-    font-size: 1.25rem;
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  p {
-    margin-top: 0.5rem;
-    margin-bottom: 0;
-  }
-  .link-card:is(:hover, :focus-within) {
-    background-position: 0;
-    background-image: var(--accent-gradient);
-  }
-  .link-card:is(:hover, :focus-within) h2 {
-    color: rgb(var(--accent-light));
-  }
-</style>
+</article>

@@ -1,0 +1,60 @@
+---
+import { cn } from '@common';
+import { TagVariant, Variants } from './Tag';
+
+export enum TagSize {
+  xs = 'xs',
+  sm = 'sm',
+}
+
+export interface Props {
+  /**
+   * The shape of the component. It determines the importance in the hierarchy, for example, the contained button commands the most attention
+   */
+  variant?: TagVariant;
+
+  /**
+   * The size of the component
+   */
+  size?: TagSize;
+
+  /**
+   * Specify an optional className to be added to the component
+   */
+  class?: string;
+
+  /**
+   * Specify an optional test ID to use on e2e tests.
+   */
+  dataTestId?: string;
+}
+
+const {
+  class: className,
+  dataTestId,
+  size = TagSize.sm,
+  variant = TagVariant.success,
+} = Astro.props;
+
+const classes = {
+  tag: cn(
+    'items-center rounded-md',
+    'flex justify-center flex-grow-0 flex-shrink-0',
+    'p-2',
+    { 'max-w-fit': size === TagSize.sm, 'w-4 h-4': size === TagSize.xs },
+    Variants[variant],
+    className
+  ),
+  text: cn('text-xs font-medium'),
+};
+---
+
+{
+  (
+    <div data-testid={dataTestId} class={classes.tag}>
+      <span class={classes.text}>
+        <slot />
+      </span>
+    </div>
+  )
+}
