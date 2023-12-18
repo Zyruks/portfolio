@@ -1,6 +1,6 @@
 [
   {
-    "href": "https://www.ui-guideline.com",
+    "href": "https://ui-guideline-v2.vercel.app/",
     "title": "UI Guideline",
     "body": "Developed using Next.js, Tailwind CSS, and TypeScript, UI-Guideline.com serves as an essential resource, drawing over 13,000 monthly visitors seeking UI component guidance.",
     "subTitle": "Collaboration with Sergio Ruiz",
@@ -31,7 +31,7 @@
     "date": "2023"
   },
   {
-    "href": "/master-appliance",
+    "href": "",
     "title": "Master Appliance Tampa",
     "body": "Revitalized an online presence with a bespoke website, enhancing customer acquisition by 80% through strategic design and development.",
     "tags": ["HTML 5", "CSS 3", "JavaScript ES6"],
