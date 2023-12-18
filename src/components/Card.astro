@@ -43,11 +43,17 @@ const { href, title, body, class: className, tags, date, subTitle } = Astro.prop
 
 const classes = {
   container: cn(
+    'projects-card',
+    'group',
     'w-full rounded-2xl border-2 border-gray-900 hover:border-gray-700',
     'bg-gray-900 hover:bg-gray-800',
     'transition-all duration-300',
     'shadow-sm shadow-transparent hover:shadow-md hover:shadow-slate-950',
-    'group',
+
+    // update view on mobile
+    'data-[on-view=true]:border-gray-700',
+    'data-[on-view=true]:bg-gray-800',
+    'data-[on-view=true]:shadow-slate-950',
     className
   ),
   date: cn(
@@ -60,7 +66,7 @@ const classes = {
 };
 ---
 
-<article class={classes.container}>
+<article class={classes.container} data-on-view="false">
   {
     href === '' ? (
       <div class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10 xl:grid-cols-[15%,1fr]">
@@ -97,3 +103,22 @@ const classes = {
     )
   }
 </article>
+
+<script>
+  const projectSection = document.querySelectorAll('.projects-card');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && window.innerWidth <= 1024) {
+          entry.target.setAttribute('data-on-view', 'true');
+        } else {
+          entry.target.setAttribute('data-on-view', 'false');
+        }
+      });
+    },
+    { threshold: 1 }
+  );
+
+  projectSection.forEach((project) => observer.observe(project));
+</script>
