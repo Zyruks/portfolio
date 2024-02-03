@@ -50,12 +50,10 @@ const projects: ProjectArray = projectsData;
     <aside
       class="top-0 mx-auto flex h-[40svh] max-w-xs flex-col justify-between lg:sticky lg:h-[100svh] xl:max-w-md"
     >
-      <div class="mt-14 text-center lg:text-left">
-        <h1 class="animate-fade-up text-fluid-lg font-bold xl:text-fluid-xl">Samuel Llibre</h1>
-        <span class="block animate-fade-up text-xl font-semibold text-gray-300 animate-delay-200"
-          >Front-end Developer</span
-        >
-        <p class="mt-2 animate-fade-up text-gray-400 animate-delay-300">
+      <div class="mt-14 animate-fade-right text-center lg:text-left">
+        <h1 class="text-fluid-lg font-bold xl:text-fluid-xl">Samuel Llibre</h1>
+        <span class="block text-xl font-semibold text-gray-300">Front-end Developer</span>
+        <p class="mt-2 text-gray-400">
           I thrive on crafting exceptional and accessible digital experiences, with a passion for
           pushing the boundaries of creativity through innovative CSS and JavaScript
           experimentation.
@@ -63,7 +61,7 @@ const projects: ProjectArray = projectsData;
       </div>
       <Navigation class="max-lg:hidden" />
       <footer
-        class="flex animate-fade-up justify-center gap-6 py-10 lg:ml-4 lg:items-start lg:justify-start lg:pb-10"
+        class="flex animate-fade-right justify-center gap-6 py-10 lg:ml-4 lg:items-start lg:justify-start lg:pb-10"
       >
         <a href="https://github.com/zyruks" target="_blank" tabindex="0">
           <Icon
@@ -95,8 +93,8 @@ const projects: ProjectArray = projectsData;
         </a>
       </footer>
     </aside>
-    <section class="grid w-full gap-10">
-      <div id="top" class="section-area | my-20 flex animate-fade-up flex-col gap-4 text-lg">
+    <section class="grid w-full animate-fade-up gap-10">
+      <article id="top" class="section-area | my-20 flex flex-col gap-4 text-lg">
         <p>
           Back in 2013, a spark of curiosity led me to explore the intricacies of graphic design,
           igniting a passion for the digital arts that seamlessly evolved into web development💻.
@@ -119,9 +117,9 @@ const projects: ProjectArray = projectsData;
           moments with my loved ones, or exploring the vast terrains of gaming worlds, each an
           adventure in its own right 🌍.
         </p>
-      </div>
+      </article>
 
-      <div id="projects" class="section-area | grid animate-fade gap-8 animate-delay-300">
+      <article id="projects" class="section-area | mt-20 grid gap-8">
         <h2 class="flex items-center gap-8 text-2xl font-bold uppercase">Projects</h2>
         {
           projects.map((item) => (
@@ -135,9 +133,12 @@ const projects: ProjectArray = projectsData;
             />
           ))
         }
-      </div>
+      </article>
 
-      <div id="experience" class="section-area | mt-20 grid animate-fade gap-8 animate-delay-300">
+      <article
+        id="experience"
+        class="section-area | mt-20 grid animate-fade gap-8 animate-delay-300"
+      >
         <h2 class="flex items-center gap-8 text-2xl font-bold uppercase">Experience</h2>
         {
           experience.map((item) => (
@@ -150,7 +151,7 @@ const projects: ProjectArray = projectsData;
             />
           ))
         }
-      </div>
+      </article>
     </section>
   </main>
 </BasicLayout>
