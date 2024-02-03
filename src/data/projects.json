@@ -2,8 +2,8 @@
   {
     "href": "https://ui-guideline-v2.vercel.app/",
     "title": "UI Guideline",
-    "body": "Developed using Next.js, Tailwind CSS, and TypeScript, UI-Guideline.com serves as an essential resource, drawing over 13,000 monthly visitors seeking UI component guidance.",
-    "subTitle": "Collaboration with Sergio Ruiz",
+    "body": "Standardized  UI component nomenclature, aimed to make UI Guideline an essential resource for UI professionals. Key responsibilities included data optimization, responsive design, cross­ browser testing, SEO enhancements, and WCAG-compliant accessibility features.",
+    "subTitle": "",
     "tags": [
       "Next.js 13",
       "Tailwind 3.3.0",
@@ -19,7 +19,7 @@
     "href": "https://www.twon.app",
     "title": "Twon",
     "body": "A Next.js application that boosts Twitter engagement through innovative features, offering a unique node-based interface for user interaction.",
-    "subTitle": "Collaboration with Sergio Ruiz",
+    "subTitle": "",
     "tags": [
       "Next.js 13",
       "Tailwind 3.3.0",

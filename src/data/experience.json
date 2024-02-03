@@ -1,5 +1,20 @@
 [
   {
+    "href": "https://ui-guideline-v2.vercel.app/",
+    "title": "UI Guideline",
+    "body": "Standardized  UI component nomenclature, aimed to make UI Guideline an essential resource for UI professionals. Key responsibilities included data optimization, responsive design, cross­ browser testing, SEO enhancements, and WCAG-compliant accessibility features.",
+    "tags": [
+      "Next.js 13",
+      "Tailwind 3.3.0",
+      "TypeScript 5.0.4",
+      "Prisma 4.13.0",
+      "tRPC 10.20.0",
+      "React 18.2.0",
+      "Clerk 4.27.1"
+    ],
+    "date": "Aug 2023 - Present"
+  },
+  {
     "href": "",
     "title": "Freelancer · Front-End Developer",
     "body": "Specialize in mobile-first web development projects, championing responsive design principles to ensure optimal user experience across various devices. Engage with a spectrum of web development initiatives, with a keen focus on leveraging modern front-end technologies and innovative user interface design. Collaborate with industry professionals, contributing expertise to high-impact projects that deliver cutting-edge and user-centric solutions.",
