@@ -1,6 +1,6 @@
 ---
 import { cn } from '@common';
-import Tag from './Tag/Tag.astro';
+import Tag from '../Tag/Tag.astro';
 
 interface Props {
   /**
@@ -26,7 +26,7 @@ interface Props {
   /**
    * An array of tags associated with the item.
    */
-  tags: string[];
+  tags: Array<string>;
 
   /**
    * The date associated with the item.
