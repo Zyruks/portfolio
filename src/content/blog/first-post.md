@@ -5,7 +5,7 @@ description: Lorem ipsum dolor sit amet
 pubDate: 2022-07-08T03:00:00.000Z
 cover: /blog-placeholder-1.jpg
 labels: UX, Frontend
-tags: ['PC Hardware' , 'Docker']
+tags: ['PC Hardware', 'Docker']
 ---
 
 ## Hello world
