@@ -4,7 +4,7 @@ description: Lorem ipsum dolor sit amet
 pubDate: 2022-07-02T03:00:00.000Z
 cover: /blog-placeholder-about.jpg
 labels: UX, Frontend
-tags: ['PC Hardware' , 'Docker']
+tags: ['Web Development']
 ---
 
 This theme comes with the [@astrojs/mdx](https://docs.astro.build/en/guides/integrations-guide/mdx/) integration installed and configured in your `astro.config.mjs` config file. If you prefer not to use MDX, you can disable support by removing the integration from your config file.
@@ -24,6 +24,6 @@ import HeaderLink from '../../components/HeaderLink.astro';
 
 ## More Links
 
-* [MDX Syntax Documentation](https://mdxjs.com/docs/what-is-mdx)
-* [Astro Usage Documentation](https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages)
-* **Note:** [Client Directives](https://docs.astro.build/en/reference/directives-reference/#client-directives) are still required to create interactive components. Otherwise, all components in your MDX will render as static HTML (no JavaScript) by default.
+- [MDX Syntax Documentation](https://mdxjs.com/docs/what-is-mdx)
+- [Astro Usage Documentation](https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages)
+- **Note:** [Client Directives](https://docs.astro.build/en/reference/directives-reference/#client-directives) are still required to create interactive components. Otherwise, all components in your MDX will render as static HTML (no JavaScript) by default.

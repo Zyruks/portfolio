@@ -34,5 +34,9 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-scrollbar'), require('tailwindcss-animated')],
+  plugins: [
+    require('tailwindcss-scrollbar'),
+    require('tailwindcss-animated'),
+    require('@tailwindcss/typography'),
+  ],
 };
