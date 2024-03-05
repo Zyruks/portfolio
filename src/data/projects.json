@@ -4,15 +4,7 @@
     "title": "UI Guideline",
     "body": "Standardized  UI component nomenclature, aimed to make UI Guideline an essential resource for UI professionals. Key responsibilities included data optimization, responsive design, cross­ browser testing, SEO enhancements, and WCAG-compliant accessibility features.",
     "subTitle": "",
-    "tags": [
-      "Next.js 13",
-      "Tailwind 3.3.0",
-      "TypeScript 5.0.4",
-      "Prisma 4.13.0",
-      "tRPC 10.20.0",
-      "React 18.2.0",
-      "Clerk 4.27.1"
-    ],
+    "tags": ["Next.js 13", "Tailwind 3.3.0", "TypeScript 5.0.4", "Prisma 4.13.0", "tRPC 10.20.0", "React 18.2.0", "Clerk 4.27.1"],
     "date": "2023 - Present"
   },
   {
@@ -20,15 +12,7 @@
     "title": "Twon",
     "body": "A Next.js application that boosts Twitter engagement through innovative features, offering a unique node-based interface for user interaction.",
     "subTitle": "",
-    "tags": [
-      "Next.js 13",
-      "Tailwind 3.3.0",
-      "TypeScript 5.0.4",
-      "Prisma 4.13.0",
-      "tRPC 10.20.0",
-      "React 18.2.0",
-      "NextAuth"
-    ],
+    "tags": ["Next.js 13", "Tailwind 3.3.0", "TypeScript 5.0.4", "Prisma 4.13.0", "tRPC 10.20.0", "React 18.2.0", "NextAuth"],
     "date": "2023 - Present"
   },
   {

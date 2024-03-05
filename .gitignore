@@ -19,13 +19,10 @@ pnpm-debug.log*
 
 #TinaCMS
 __generated__
-public/index.html
-public/assets/
-public/admin/index.html
+public/admin/
 
 # macOS-specific files
 .DS_Store
-
 
 # vercel
 .vercel

@@ -16,9 +16,8 @@ const { metaTitle = SITE_TITLE, metaDescription = SITE_DESCRIPTION } = Astro.pro
   <head>
     <BaseHead title={metaTitle} description={metaDescription} />
   </head>
-  <body class="relative bg-gray-900 text-slate-100">
+  <body class="relative bg-gray-900 text-gray-100">
     <slot />
     <Footer />
-    <DottedPattern />
   </body>
 </html>

@@ -13,7 +13,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "clean": "git clean -xdf node_modules",
-    "preprettier": "echo 'tina/*' > .prettierignore",
+    "preprettier": ".prettierignore",
     "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json,astro}\"",
     "format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json,astro}\"",
     "lint": "eslint .",

@@ -1,23 +1,24 @@
 ---
-title: Exploring the Basics of Web Development
+draft: false
+author: Zyruks
+title: Exploring the Basics of Web Development.
 description: >-
   An introductory guide to the fundamental concepts of web development, covering
   HTML, CSS, and JavaScript.
-pubDate: 2024-03-03T04:00:00.000Z
-cover: /wallhaven-5gm153.jpg
+readTime: 5
+pubDate: 2024-03-06T04:00:00.000Z
+cover: /blog_assets/images/blog-placeholder-1.jpg
 tags:
-  - Web Development
-  - JavaScript
   - CSS
+  - UX/UI
   - HTML
+  - JavaScript
+  - Figma
   - Frontend Basics
+  - Web Development
 ---
 
-# Exploring the Basics of Web Development
-
 Welcome to this introductory guide on the fundamental concepts of web development. In this post, we'll dive into the core technologies that power the web: HTML, CSS, and JavaScript. Whether you're just starting your journey in web development or looking to refresh your knowledge, this guide is designed to provide a solid foundation in these essential technologies.
-
-![](/wallhaven-5gm153.jpg)
 
 ## HTML: The Structure of the Web
 

@@ -1,0 +1,57 @@
+---
+import { cn, PostTags } from '@common';
+
+export enum TagSize {
+  xs = 'xs',
+  sm = 'sm',
+}
+
+interface Props {
+  /**
+   * Tag type from `PostTags` enum, defining content and style.
+   */
+  tag: PostTags;
+
+  /**
+   * The size of the component
+   */
+  size?: TagSize;
+
+  /**
+   * ARIA label for accessibility.
+   */
+  ariaLabel?: string;
+
+  /**
+   * Specify an optional className to be added to the component
+   */
+  className?: string;
+}
+
+const tagColorMapping: Record<PostTags, string> = {
+  [PostTags.WebDevelopment]: 'bg-blue-400/30 text-blue-300 ring-blue-400/40',
+  [PostTags.JavaScript]: 'bg-yellow-400/30 text-yellow-300 ring-yellow-400/40',
+  [PostTags.CSS]: 'bg-teal-400/30 text-teal-300 ring-teal-400/40',
+  [PostTags.HTML]: 'bg-red-400/30 text-red-300 ring-red-400/40',
+  [PostTags.UXUI]: 'bg-purple-400/30 text-purple-300 ring-purple-400/40',
+  [PostTags.Figma]: 'bg-indigo-400/30 text-indigo-300 ring-indigo-400/40',
+  [PostTags.FrontendBasics]: 'bg-green-400/30 text-green-300 ring-green-400/40',
+  [PostTags.Accessibility]: 'bg-orange-400/30 text-orange-300 ring-orange-400/40',
+  [PostTags.ResponsiveDesign]: 'bg-pink-400/30 text-pink-300 ring-pink-400/40',
+  [PostTags.Performance]: 'bg-lime-400/30 text-lime-300 ring-lime-400/40',
+  [PostTags.VersionControl]: 'bg-gray-400/30 text-gray-300 ring-gray-400/40',
+};
+
+const Sizes: Record<TagSize, string> = {
+  [TagSize.xs]: 'py-1 px-1.5 text-xs',
+  [TagSize.sm]: 'py-1 px-2 text-sm',
+};
+
+const { tag, size = TagSize.xs, ariaLabel, className } = Astro.props;
+const colorClass = tagColorMapping[tag] || 'bg-gray-400/10 text-primary-500 ring-1 ring-inset ring-gray-400/20';
+const classes = {
+  tag: cn('ring-1 ring-inset rounded-md select-none', colorClass, Sizes[size], className),
+};
+---
+
+<span class={classes.tag} aria-label={ariaLabel}>{tag}</span>

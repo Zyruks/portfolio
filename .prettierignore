@@ -1,5 +1,6 @@
 # Ignore everything
 /*
+/tina/tina-lock.json
 
 # Except these files & folders
 !/src
@@ -16,3 +17,4 @@
 !.stylelintrc.json
 !.lintstagedrc
 !tailwind.config.mjs
+!/tina

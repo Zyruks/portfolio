@@ -29,12 +29,7 @@ export interface Props {
   dataTestId?: string;
 }
 
-const {
-  class: className,
-  dataTestId,
-  size = TagSize.sm,
-  variant = TagVariant.success,
-} = Astro.props;
+const { class: className, dataTestId, size = TagSize.sm, variant = TagVariant.success } = Astro.props;
 
 const classes = {
   tag: cn(

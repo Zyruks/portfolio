@@ -1,0 +1,58 @@
+---
+import { cn } from '@common';
+import { getCollection } from 'astro:content';
+import FormattedDate from '@components/FormattedDate/FormattedDate.astro';
+import { IconCatalog, IconStyle } from '@components/Icon/Icon';
+import Icon from '@components/Icon/Icon.astro';
+import Tag from './Tag.astro';
+
+const allPosts = (await getCollection('post')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+// If draft is true, the post will not be shown
+const posts = allPosts.filter((post) => !post.data.draft);
+
+const classes = {
+  card: cn('grid max-w-3xl gap-4 pt-20'),
+  date: cn('text-sm', 'px-3 py-2 rounded-lg', 'border border-gray-700', 'bg-gray-900'),
+  readTime: cn('flex items-center gap-2', 'text-sm', 'p-2 rounded-lg', 'border border-gray-700', 'bg-gray-900'),
+  cover: cn('rounded-lg'),
+  title: cn('text-fluid-lg font-bold leading-none'),
+  descrition: cn('mt-4'),
+  button: cn('mt-4 w-fit rounded-lg px-4 py-2', 'bg-gray-800 hover:bg-gray-700', 'transition-colors'),
+};
+---
+
+{
+  posts.map((post) => (
+    <li class={classes.card}>
+      <div class="flex items-center justify-between">
+        <p class={classes.date}>
+          <FormattedDate date={post.data.pubDate} />
+        </p>
+        <div class={classes.readTime}>
+          <Icon icon={IconCatalog.clock} class="h-4 w-4" />
+          <p>{post.data.readTime} min read</p>
+        </div>
+      </div>
+
+      <img class={classes.cover} width={1000} height={360} src={post.data.cover} alt={post.data.coverAlt} />
+
+      <div class="flex items-center gap-2">
+        <Icon icon={IconCatalog.tag} class="h-6 w-6 text-gray-400" />
+
+        {post.data.tags.map((tag) => {
+          return <Tag tag={tag} />;
+        })}
+      </div>
+
+      <div class="mt-4">
+        <h2 class={classes.title}>{post.data.title}</h2>
+        <p class={classes.descrition}>{post.data.description}</p>
+      </div>
+
+      <a href={`/blog/${post.slug}/`} class={classes.button}>
+        Read More
+      </a>
+    </li>
+  ))
+}

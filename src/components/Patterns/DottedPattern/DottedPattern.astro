@@ -27,53 +27,30 @@ interface Props {
   gradientExtent?: number;
 }
 
-const {
-  class: className,
-  gradientPosition = SquareBgMaskDirection.topRight,
-  gradientExtent = 150,
-} = Astro.props;
+const { class: className, gradientPosition = SquareBgMaskDirection.topRight, gradientExtent = 150 } = Astro.props;
 
 const classes = {
-  container: cn(
-    'absolute inset-0 -z-10 h-full w-full stroke-gray-200 dark:stroke-gray-800',
-    className
-  ),
+  container: cn('absolute inset-0 -z-10 h-full w-full stroke-gray-200 dark:stroke-gray-800', className),
   pattern: cn('overflow-visible fill-gray-50 dark:fill-gray-900/30'),
 };
 
 const maskImageInlineStyle = `radial-gradient(${gradientExtent}% ${gradientExtent}% at ${MaskDirections[gradientPosition]},white,transparent)`;
 ---
 
-<div
-  class={classes.container}
-  style={{ WebkitMaskImage: maskImageInlineStyle, maskImage: maskImageInlineStyle }}
->
+<div class={classes.container} style={{ WebkitMaskImage: maskImageInlineStyle, maskImage: maskImageInlineStyle }}>
   <svg class="relative -z-20 h-full w-full" aria-hidden="true">
     <defs>
-      <pattern
-        id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-        width="200"
-        height="200"
-        x="50%"
-        y="-1"
-        patternUnits="userSpaceOnUse"
-      >
+      <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
         <path d="M100 200V.5M.5 .5H200" fill="none"></path>
       </pattern>
     </defs>
 
     {/* Inner Squares */}
     <svg x="50%" y="-1" class={classes.pattern}>
-      <path
-        d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-        stroke-width="0"></path>
+      <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0"></path>
     </svg>
 
     {/* Pattern Area */}
-    <rect
-      width="100%"
-      height="100%"
-      stroke-width="0"
-      fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"></rect>
+    <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"></rect>
   </svg>
 </div>

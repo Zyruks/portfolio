@@ -23,6 +23,10 @@ export default {
         '15s': '15s',
         '20s': '20s',
       },
+      fontFamily: {
+        merriweather: ['"Merriweather Sans"', 'sans-serif'],
+        'merriweather-variable': ['"Merriweather Sans Variable"', 'sans-serif'],
+      },
       fontSize: {
         'fluid-xs': 'var(--fluid-xs)',
         'fluid-sm': 'var(--fluid-sm)',
@@ -34,9 +38,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-scrollbar'),
-    require('tailwindcss-animated'),
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('tailwindcss-scrollbar'), require('tailwindcss-animated'), require('@tailwindcss/typography')],
 };

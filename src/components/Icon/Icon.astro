@@ -28,11 +28,7 @@ interface Props extends HTMLAttributes<'svg'> {
   iconStyle?: IconStyle;
 }
 
-const {
-  class: className,
-  icon = IconCatalog.adjustmentsHorizontal,
-  iconStyle = IconStyle.thin,
-} = Astro.props;
+const { class: className, icon = IconCatalog.adjustmentsHorizontal, iconStyle = IconStyle.thin } = Astro.props;
 
 const classes = cn(
   {
@@ -57,10 +53,5 @@ const iconPath = iconStyle === IconStyle.solid ? iconPaths.solid : iconPaths.out
   focusable="false"
   aria-hidden="true"
 >
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    d={iconPath}></path>
+  <path fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" d={iconPath}></path>
 </svg>

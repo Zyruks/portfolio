@@ -1,71 +1,18 @@
 ---
 import { cn } from '@common';
-import { getCollection } from 'astro:content';
-import FormattedDate from '@components/FormattedDate/FormattedDate.astro';
-import { IconCatalog } from '@components/Icon/Icon';
-import Icon from '@components/Icon/Icon.astro';
 import BasicLayout from '@layouts/BasicLayout.astro';
-
-const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
+import Cards from './_components/Cards.astro';
 
 const classes = {
-  container: cn(
-    'flex flex-col items-center justify-center gap-10 divide-y-2 divide-gray-800 px-4 md:px-0'
-  ),
-  card: cn('grid max-w-2xl gap-10 pt-10'),
-  date: cn('text-sm', 'px-3 py-2 rounded-lg', 'border border-gray-700', 'bg-gray-900'),
-  readTime: cn(
-    'flex items-center gap-2',
-    'text-sm',
-    'p-2 rounded-lg',
-    'border border-gray-700',
-    'bg-gray-900'
-  ),
-  cover: cn('rounded-lg'),
-  title: cn('text-fluid-lg font-bold '),
-  descrition: cn('text-balance'),
-  button: cn('w-fit rounded-lg px-4 py-2', 'bg-gray-800 hover:bg-gray-700', 'transition-colors'),
+  container: cn('flex flex-col items-center justify-center gap-20 divide-y divide-gray-800 px-4 md:px-0'),
 };
-// TODO: Make this card a component
 ---
 
 <BasicLayout>
   <main>
     <section class="container mx-auto">
       <ul class={classes.container}>
-        {
-          posts.map((post) => (
-            <li class={classes.card}>
-              <div class="flex items-center justify-between">
-                <p class={classes.date}>
-                  <FormattedDate date={post.data.pubDate} />
-                </p>
-                <div class={classes.readTime}>
-                  <Icon icon={IconCatalog.clock} class="h-4 w-4" />
-                  <p>5 min read</p>
-                </div>
-              </div>
-              <img class={classes.cover} width={720} height={360} src={post.data.cover} alt="" />
-              <p>
-                {post.data.tags.map((tag) => {
-                  return <div>{tag}</div>;
-                })}{' '}
-                e
-              </p>
-              <div>
-                <h2 class={classes.title}>{post.data.title}</h2>
-
-                <p class={classes.descrition}>{post.data.description}</p>
-              </div>
-
-              <a href={`/blog/${post.slug}/`} class={classes.button}>
-                Read More
-              </a>
-            </li>
-          ))
-        }
+        <Cards />
       </ul>
     </section>
   </main>

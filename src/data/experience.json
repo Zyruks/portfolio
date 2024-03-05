@@ -3,15 +3,7 @@
     "href": "https://ui-guideline-v2.vercel.app/",
     "title": "UI Guideline",
     "body": "Standardized  UI component nomenclature, aimed to make UI Guideline an essential resource for UI professionals. Key responsibilities included data optimization, responsive design, cross­ browser testing, SEO enhancements, and WCAG-compliant accessibility features.",
-    "tags": [
-      "Next.js 13",
-      "Tailwind 3.3.0",
-      "TypeScript 5.0.4",
-      "Prisma 4.13.0",
-      "tRPC 10.20.0",
-      "React 18.2.0",
-      "Clerk 4.27.1"
-    ],
+    "tags": ["Next.js 13", "Tailwind 3.3.0", "TypeScript 5.0.4", "Prisma 4.13.0", "tRPC 10.20.0", "React 18.2.0", "Clerk 4.27.1"],
     "date": "Aug 2023 - Present"
   },
   {

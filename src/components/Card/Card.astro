@@ -56,9 +56,7 @@ const classes = {
     'data-[on-view=true]:shadow-slate-950',
     className
   ),
-  date: cn(
-    'whitespace-nowrap text-gray-400 group-hover:text-gray-200 transition-colors duration-500'
-  ),
+  date: cn('whitespace-nowrap text-gray-400 group-hover:text-gray-200 transition-colors duration-500'),
   title: cn('text-lg font-bold text-gray-100 flex gap-4 items-center'),
   subtitle: cn('mt-2 block text-gray-400 group-hover:text-gray-300 transition-colors duration-500'),
   body: cn('mt-2 text-gray-400'),
@@ -83,11 +81,7 @@ const classes = {
         </div>
       </div>
     ) : (
-      <a
-        href={href}
-        target="_blank"
-        class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10 xl:grid-cols-[15%,1fr]"
-      >
+      <a href={href} target="_blank" class="flex flex-col gap-2 p-4 lg:grid lg:grid-cols-[20%,1fr] lg:gap-10 xl:grid-cols-[15%,1fr]">
         <span class={classes.date}>{date}</span>
         <div>
           <h2 class={classes.title}>{title}</h2>

@@ -1,24 +1,77 @@
 ---
+import { cn } from '@common';
 import { getCollection, type CollectionEntry } from 'astro:content';
+import FormattedDate from '@components/FormattedDate/FormattedDate.astro';
+import { IconCatalog } from '@components/Icon/Icon';
+import Icon from '@components/Icon/Icon.astro';
+import BasicLayout from '@layouts/BasicLayout.astro';
+import Tag from './_components/Tag.astro';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const allPosts = await getCollection('post');
+
+  // If draft is true, the post will not be shown
+  const posts = allPosts.filter((post) => !post.data.draft);
+
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: post,
   }));
 }
 
-type Props = CollectionEntry<'blog'>;
+const classes = {
+  card: cn('grid max-w-3xl gap-4 pt-20'),
+  date: cn('text-sm', 'px-3 py-2 rounded-lg', 'border border-gray-700', 'bg-gray-900'),
+  readTime: cn('flex items-center gap-2', 'text-sm', 'p-2 rounded-lg', 'border border-gray-700', 'bg-gray-900'),
+  cover: cn('rounded-lg'),
+  title: cn('text-fluid-lg font-bold leading-none'),
+  descrition: cn('mt-4'),
+  button: cn('mt-4 w-fit rounded-lg px-4 py-2', 'bg-gray-800 hover:bg-gray-700', 'transition-colors'),
+};
+
+type Props = CollectionEntry<'post'>;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<main>
-  <section class="container mx-auto max-w-5xl">
-    <div class="prose lg:prose-2xl">
-      <Content />
-    </div>
-  </section>
-</main>
+<BasicLayout>
+  <main>
+    <section class="container mx-auto max-w-3xl pt-10">
+      <div class="grid gap-6">
+        <div class="flex flex-wrap items-center gap-4">
+          {
+            post.data.tags.map((tag) => {
+              return <Tag tag={tag} />;
+            })
+          }
+        </div>
+        <h1 class="text-6xl leading-none">
+          {post.data.title}
+        </h1>
+        <div class="flex items-center gap-6">
+          <p class={classes.date}>
+            <FormattedDate date={post.data.pubDate} />
+          </p>
+          <div class={classes.readTime}>
+            <Icon icon={IconCatalog.clock} class="h-4 w-4" />
+            <p>{post.data.readTime} min read</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <img src="https://avatars.githubusercontent.com/u/14036522?v=4" alt="" class="h-10 w-10 rounded-full" />
+          <p class="font-bold">
+            {post.data.author}
+          </p>
+        </div>
+      </div>
+
+      <hr class="mb-10 mt-10" />
+      <div
+        class="prose lg:prose-2xl prose-h1:text-gray-100 prose-h2:text-fluid-lg prose-h2:text-gray-100 prose-p:text-xl prose-p:leading-relaxed prose-p:text-gray-300 prose-a:text-blue-400 prose-a:hover:text-blue-300 prose-blockquote:border-gray-700 prose-blockquote:text-gray-400 prose-strong:text-white prose-ol:list-decimal prose-ol:marker:text-gray-400 prose-ul:list-disc prose-ul:marker:text-gray-400 prose-table:border-gray-700 prose-th:text-gray-200 prose-td:text-gray-300"
+      >
+        <Content />
+      </div>
+    </section>
+  </main>
+</BasicLayout>
