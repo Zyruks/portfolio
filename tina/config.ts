@@ -148,7 +148,6 @@ export default defineConfig({
               const date = new Date(values?.pubDate);
               const year = date.getFullYear();
               const month = formatMonth(date);
-              const day = date.getDate().toString().padStart(2, '0');
 
               return `/${year}/${month}/${generateSlug(values.title)}`;
             },

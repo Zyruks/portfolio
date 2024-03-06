@@ -1,4 +1,5 @@
 {
+  "exclude": ["./tina/__generated__", "./public/admin/"],
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "jsx": "react",
