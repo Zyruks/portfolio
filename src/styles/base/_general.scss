@@ -1,7 +1,8 @@
 /* Set core root defaults */
-html:focus-within {
+* {
   scroll-behavior: smooth;
 }
+
 
 body {
   font-family: 'Merriweather Sans', sans-serif;
