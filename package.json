@@ -7,17 +7,16 @@
     "build": "astro check &&  tinacms build && astro build ",
     "clean": "git clean -xdf node_modules",
     "dev": "tinacms dev -c \"astro dev\"",
+    "preprettier": ".prettierignore",
     "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json,astro}\"",
     "format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,mdx,json,astro}\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "preprettier": ".prettierignore",
     "preview": "astro preview",
     "start": "astro dev",
     "type-check": "astro-check"
   },
   "dependencies": {
-    "@commitlint/types": "^19.0.3",
     "@sentry/astro": "^7.105.0",
     "astro": "^4.4.6",
     "tinacms": "^1.5.28"
@@ -31,6 +30,7 @@
     "@astrojs/ts-plugin": "^1.5.3",
     "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^19.0.3",
+    "@commitlint/types": "^19.0.3",
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@semantic-release/changelog": "^6.0.3",

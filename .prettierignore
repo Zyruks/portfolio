@@ -8,12 +8,10 @@
 !/.github
 !tsconfig.json
 !astro.config.ts
-!package.json
 !.prettierrc.mjs
 !.eslintrc.cjs
 !postcss.config.cjs
 !README.md
-!commitlint.config.mjs
 !.lintstagedrc
 !tailwind.config.mjs
 !/tina
