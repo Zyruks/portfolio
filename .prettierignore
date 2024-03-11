@@ -9,12 +9,11 @@
 !tsconfig.json
 !astro.config.ts
 !package.json
-!.prettierrc
+!.prettierrc.mjs
 !.eslintrc.cjs
 !postcss.config.cjs
 !README.md
-!commitlint.config.cjs
-!.stylelintrc.json
+!commitlint.config.mjs
 !.lintstagedrc
 !tailwind.config.mjs
 !/tina
