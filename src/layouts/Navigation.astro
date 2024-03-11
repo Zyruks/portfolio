@@ -1,5 +1,5 @@
 ---
-import { cn, DATASTATUS } from '@common';
+import { cn } from '@common';
 import HeaderLink from '@components/Header/HeaderLink/HeaderLink.astro';
 
 interface Props {
@@ -19,7 +19,10 @@ const classes = {
 </nav>
 
 <script>
+  import { DATASTATUS } from '@common';
+
   const navLinks = document.querySelectorAll('.nav-link');
+
   const projectSection = document.querySelectorAll('.section-area');
 
   navLinks.forEach((link) => {
