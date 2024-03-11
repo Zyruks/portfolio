@@ -10,3 +10,5 @@ astro.config.ts
 tailwind.config.mjs
 .eslintrc.cjs
 commitlint.config.mjs
+src/env.d.ts
+tina/*
