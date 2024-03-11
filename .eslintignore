@@ -6,4 +6,7 @@ dist
 .vercel
 .astro
 .pnpm
-.astro.config.mjs
+astro.config.ts
+tailwind.config.mjs
+.eslintrc.cjs
+commitlint.config.mjs
