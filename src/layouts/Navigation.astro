@@ -19,13 +19,16 @@ const classes = {
 </nav>
 
 <script>
+  import { DATASTATUS } from '@common';
+
   const navLinks = document.querySelectorAll('.nav-link');
+
   const projectSection = document.querySelectorAll('.section-area');
 
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      navLinks.forEach((lnk) => lnk.setAttribute('data-status', 'inactive'));
-      link.setAttribute('data-status', 'active');
+      navLinks.forEach((lnk) => lnk.setAttribute(DATASTATUS, 'inactive'));
+      link.setAttribute(DATASTATUS, 'active');
     });
   });
 
@@ -37,9 +40,9 @@ const classes = {
 
           navLinks.forEach((lnk) => {
             if (lnk.getAttribute('href') === '#' + activeSection) {
-              lnk.setAttribute('data-status', 'active');
+              lnk.setAttribute(DATASTATUS, 'active');
             } else {
-              lnk.setAttribute('data-status', 'inactive');
+              lnk.setAttribute(DATASTATUS, 'inactive');
             }
           });
         }

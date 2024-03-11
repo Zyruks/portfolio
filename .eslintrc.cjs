@@ -1,27 +1,32 @@
 module.exports = {
-  extends: ['plugin:astro/recommended'],
-  plugins: ['prettier'],
-  parser: '@typescript-eslint/parser',
+  extends: [
+    'plugin:astro/recommended',
+    'plugin:sonarjs/recommended',
+    'plugin:compat/recommended',
+    'plugin:promise/recommended',
+    'plugin:astro/jsx-a11y-strict',
+    'prettier',
+  ],
   overrides: [
     {
       files: ['*.astro'],
-      plugins: ['astro'],
-      env: {
-        node: true,
-        'astro/astro': true,
-        es2020: true,
-      },
-
       parser: 'astro-eslint-parser',
-
       parserOptions: {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro'],
       },
-      rules: {
-        'astro/no-conflict-set-directives': 'error',
-        'astro/no-unused-define-vars-in-style': 'error',
+      rules: {},
+    },
+    {
+      files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      parserOptions: {
+        ecmaVersion: 2020,
+        sourceType: 'module',
       },
+      rules: {},
     },
   ],
 };
