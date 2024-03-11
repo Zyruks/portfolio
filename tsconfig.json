@@ -2,7 +2,6 @@
   "exclude": ["./tina/__generated__", "./public/admin/", "./dist/"],
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "jsx": "react",
     "baseUrl": "src",
     "strictNullChecks": true,
     "paths": {
