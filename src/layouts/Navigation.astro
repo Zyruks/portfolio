@@ -1,5 +1,5 @@
 ---
-import { cn } from '@common';
+import { cn, DATASTATUS } from '@common';
 import HeaderLink from '@components/Header/HeaderLink/HeaderLink.astro';
 
 interface Props {
@@ -24,8 +24,8 @@ const classes = {
 
   navLinks.forEach((link) => {
     link.addEventListener('click', () => {
-      navLinks.forEach((lnk) => lnk.setAttribute('data-status', 'inactive'));
-      link.setAttribute('data-status', 'active');
+      navLinks.forEach((lnk) => lnk.setAttribute(DATASTATUS, 'inactive'));
+      link.setAttribute(DATASTATUS, 'active');
     });
   });
 
@@ -37,9 +37,9 @@ const classes = {
 
           navLinks.forEach((lnk) => {
             if (lnk.getAttribute('href') === '#' + activeSection) {
-              lnk.setAttribute('data-status', 'active');
+              lnk.setAttribute(DATASTATUS, 'active');
             } else {
-              lnk.setAttribute('data-status', 'inactive');
+              lnk.setAttribute(DATASTATUS, 'inactive');
             }
           });
         }

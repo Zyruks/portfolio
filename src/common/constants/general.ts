@@ -24,3 +24,5 @@ export type ColorVariants =
   | 'sand'
   | 'camo'
   | 'jungle';
+
+export const DATASTATUS = 'data-status';
