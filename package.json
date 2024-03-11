@@ -8,7 +8,7 @@
     "clean": "git clean -xdf node_modules",
     "dev": "tinacms dev -c \"astro dev\"",
     "format": "prettier --check \"**/*.{js,cjs,mjs,ts,tsx,md,json,astro}\"",
-    "format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json,astro}\"",
+    "format:fix": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,mdx,json,astro}\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "npx husky install",
