@@ -1,8 +1,22 @@
 [
   {
+    "href": "https://www.linkedin.com/company/edenmedicalglobal",
+    "title": "Eden · Email Development Specialist",
+    "body": "Create monthly email templates ensuring accessibility and usability. Responsibilities included designing templates with HTML, CSS, and MJML, ensuring compatibility with dark/light modes, responsiveness across various devices, and cross-platform optimization.",
+    "tags": ["HTML5", "CSS3", "MJML framework 4.15.2"],
+    "date": "May 2024 - Present"
+  },
+  {
+    "href": "https://www.youtube.com/channel/UCSf6S_PAhXsqGMTPDiKgdRg",
+    "title": "BettaTech · Frontend Developer",
+    "body": "Lead the development and implementation of user-friendly, responsive UI components. Key responsibilities included creating and optimizing reusable components, ensuring responsive design, integrating webhooks with AWS Lambda for Stripe subscriptions, and collaborating closely with design and backend teams.",
+    "tags": ["Vue 3.4.24", "Tailwind 3.3.1", "TypeScript 5.0.4", "AWS Lambda", "Amazon Cognito", "PostHog", "Stripe"],
+    "date": "Apr 2024 - Present"
+  },
+  {
     "href": "https://ui-guideline-v2.vercel.app/",
     "title": "UI Guideline",
-    "body": "Standardized  UI component nomenclature, aimed to make UI Guideline an essential resource for UI professionals. Key responsibilities included data optimization, responsive design, cross­ browser testing, SEO enhancements, and WCAG-compliant accessibility features.",
+    "body": "Standardized UI component nomenclature, aimed to make UI Guideline an essential resource for UI professionals. Key responsibilities included data optimization, responsive design, cross­ browser testing, SEO enhancements, and WCAG-compliant accessibility features.",
     "tags": ["Next.js 13", "Tailwind 3.3.0", "TypeScript 5.0.4", "Prisma 4.13.0", "tRPC 10.20.0", "React 18.2.0", "Clerk 4.27.1"],
     "date": "Aug 2023 - Present"
   },

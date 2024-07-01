@@ -9,14 +9,14 @@
   },
   {
     "href": "https://www.twon.app",
-    "title": "Twon",
+    "title": "Twon - Project down for maintenance",
     "body": "A Next.js application that boosts Twitter engagement through innovative features, offering a unique node-based interface for user interaction.",
     "subTitle": "",
     "tags": ["Next.js 13", "Tailwind 3.3.0", "TypeScript 5.0.4", "Prisma 4.13.0", "tRPC 10.20.0", "React 18.2.0", "NextAuth"],
     "date": "2023 - Present"
   },
   {
-    "href": "https://www.ontimesolutioncorp.com",
+    "href": "",
     "title": "On Time Solution Corp",
     "body": "Crafted a responsive and engaging company website using Astro and Sass, dramatically boosting customer interaction. This strategic update propelled weekly customer calls from a mere 2-5 to an impressive 15-25, marking a significant leap in business engagement and overall market visibility.",
     "tags": ["Astro 3", "Sass 1.62.0", "TypeScript 5.0.4", "Stylelint 14.16.1", "CUBECSS"],
